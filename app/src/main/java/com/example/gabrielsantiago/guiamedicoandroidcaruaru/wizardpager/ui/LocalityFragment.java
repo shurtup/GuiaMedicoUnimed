@@ -1,9 +1,10 @@
 package com.example.gabrielsantiago.guiamedicoandroidcaruaru.wizardpager.ui;
 
 /**
- * Created by gabriel.santiago on 12/11/2015.
+ * Created by gabriel.santiago on 13/11/2015.
  */
 import android.app.Activity;
+import android.media.Image;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.text.TextUtils;
@@ -11,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -25,14 +27,14 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class ReviewFragment extends ListFragment implements ModelCallbacks {
+public class LocalityFragment extends ListFragment implements ModelCallbacks {
     private Callbacks mCallbacks;
     private AbstractWizardModel mWizardModel;
     private List<ReviewItem> mCurrentReviewItems;
 
     private ReviewAdapter mReviewAdapter;
 
-    public ReviewFragment() {
+    public LocalityFragment() {
     }
 
     @Override
@@ -47,7 +49,7 @@ public class ReviewFragment extends ListFragment implements ModelCallbacks {
         View rootView = inflater.inflate(R.layout.fragment_page, container, false);
 
         TextView titleView = (TextView) rootView.findViewById(android.R.id.title);
-        titleView.setText(R.string.review);
+        titleView.setText(R.string.Local);
         titleView.setTextColor(getResources().getColor(R.color.verdeUnimed));
 
         ListView listView = (ListView) rootView.findViewById(android.R.id.list);
@@ -147,15 +149,16 @@ public class ReviewFragment extends ListFragment implements ModelCallbacks {
         @Override
         public View getView(int position, View view, ViewGroup container) {
             LayoutInflater inflater = LayoutInflater.from(getActivity());
-            View rootView = inflater.inflate(R.layout.list_item_review, container, false);
+            View rootView = inflater.inflate(R.layout.list_item_locality, container, false);
 
             ReviewItem reviewItem = mCurrentReviewItems.get(position);
             String value = reviewItem.getDisplayValue();
             if (TextUtils.isEmpty(value)) {
                 value = "(None)";
             }
-            ((TextView) rootView.findViewById(android.R.id.text1)).setText(reviewItem.getTitle());
-            ((TextView) rootView.findViewById(android.R.id.text2)).setText(value);
+            ((TextView) rootView.findViewById(R.id.textClinica)).setText("Centro Médico do Agreste");
+            ((TextView) rootView.findViewById(R.id.textEndereco)).setText("Rua da caçamba, nr 29");
+            ((TextView) rootView.findViewById(R.id.textHora)).setText("Hora marcada");
             return rootView;
         }
 

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GuiaMedicoAndroidCaruaru</string>
+    <string name="app_name">Guia Médico Caruaru</string>
     <string name="action_settings">Settings</string>
 
     <!-- TODO: Remove or change this placeholder text -->
@@ -7,18 +7,20 @@
     <string name="back">Fim</string>
     <string name="hello_world">Hello World</string>
 
-    <string name="next">Next</string>
-    <string name="prev">Previous</string>
-    <string name="finish">Submit order</string>
-    <string name="review">Review</string>
+    <string name="next">Próximo</string>
+    <string name="prev">Voltar</string>
+    <string name="finish">Buscar</string>
+    <string name="review">Revisão</string>
 
-    <string name="label_your_name">Name</string>
+    <string name="label_your_name">Nome</string>
     <string name="label_your_email">Email</string>
-    <string name="hint_your_name">e.g. Larry</string>
-    <string name="hint_your_email">Optional</string>
+    <string name="hint_your_name">Nome</string>
+    <string name="hint_your_email">Opcional</string>
 
     <string name="submit_confirm_message">Place the order with the deli? You will receive an email
         confirmation.</string>
-    <string name="submit_confirm_button">Place order</string>
+    <string name="submit_confirm_button">Buscar local</string>
     <string name="title_activity_main2">Main2Activity</string>
+    <string name="app_name_icon">GuiaMedico Unimed</string>
+    <string name="Local">Local</string>
 </resources>

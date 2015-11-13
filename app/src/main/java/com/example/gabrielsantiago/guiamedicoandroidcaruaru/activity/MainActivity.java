@@ -6,7 +6,7 @@ import com.example.gabrielsantiago.guiamedicoandroidcaruaru.wizardpager.model.Gu
 import com.example.gabrielsantiago.guiamedicoandroidcaruaru.wizardpager.model.ModelCallbacks;
 import com.example.gabrielsantiago.guiamedicoandroidcaruaru.wizardpager.model.Page;
 import com.example.gabrielsantiago.guiamedicoandroidcaruaru.wizardpager.ui.PageFragmentCallbacks;
-import com.example.gabrielsantiago.guiamedicoandroidcaruaru.wizardpager.ui.ReviewFragment;
+import com.example.gabrielsantiago.guiamedicoandroidcaruaru.wizardpager.ui.LocalityFragment;
 import com.example.gabrielsantiago.guiamedicoandroidcaruaru.wizardpager.ui.StepPagerStrip;
 
 import android.app.AlertDialog;
@@ -27,7 +27,7 @@ import java.util.List;
 
 public class MainActivity extends FragmentActivity implements
         PageFragmentCallbacks,
-        ReviewFragment.Callbacks,
+        LocalityFragment.Callbacks,
         ModelCallbacks {
     private ViewPager mPager;
     private MyPagerAdapter mPagerAdapter;
@@ -225,7 +225,7 @@ public class MainActivity extends FragmentActivity implements
         @Override
         public Fragment getItem(int i) {
             if (i >= mCurrentPageSequence.size()) {
-                return new ReviewFragment();
+                return new LocalityFragment();
             }
 
             return mCurrentPageSequence.get(i).createFragment();

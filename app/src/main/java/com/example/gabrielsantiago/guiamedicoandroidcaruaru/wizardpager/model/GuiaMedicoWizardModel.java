@@ -15,21 +15,14 @@ public class GuiaMedicoWizardModel extends AbstractWizardModel {
         return new PageList(
                 new Specialties(this, "Escolha a especialidade")
                         .addBranch("Urologia",
-                                new SingleFixedChoicePage(this, "E")
-                                        .setChoices("White", "Wheat", "Rye", "Pretzel", "Ciabatta")
+                                new SingleFixedChoicePage(this, "Escolha o médico")
+                                        .setChoices("Daivid Paulo", "Rafael Guinho", "Kevin Allen", "Thiago Marques", "Fabio Rezende")
                                         .setRequired(true),
 
-                                new MultipleFixedChoicePage(this, "Meats")
-                                        .setChoices("Pepperoni", "Turkey", "Ham", "Pastrami",
-                                                "Roast Beef", "Bologna"),
-
-                                new MultipleFixedChoicePage(this, "Veggies")
-                                        .setChoices("Tomatoes", "Lettuce", "Onions", "Pickles",
-                                                "Cucumbers", "Peppers"),
-
-                                new MultipleFixedChoicePage(this, "Cheeses")
-                                        .setChoices("Swiss", "American", "Pepperjack", "Muenster",
-                                                "Provolone", "White American", "Cheddar", "Bleu"),
+                                new MultipleFixedChoicePage(this, "Escolha o local de atendimento")
+                                        .setChoices("Mauricio de Nassau", "Salgado", "Bairro Universitario", "Panorama",
+                                                "Nova Caruaru", "Indianópolis")
+                                /*,
 
                                 new Specialties(this, "Cardiologia")
                                         .addBranch("Yes",
@@ -37,7 +30,9 @@ public class GuiaMedicoWizardModel extends AbstractWizardModel {
                                                         .setChoices("30 seconds", "1 minute",
                                                                 "2 minutes"))
                                         .addBranch("No")
-                                        .setValue("No"))
+                                        .setValue("No")
+                                */
+                        )
 
                         .addBranch("Cardiologia",
                                 new SingleFixedChoicePage(this, "Salad type")
@@ -62,7 +57,7 @@ public class GuiaMedicoWizardModel extends AbstractWizardModel {
 
                         .setRequired(true),
 
-                new CustomerInfoPage(this, "Your info")
+                new CustomerInfoPage(this, "Suas Informações")
                         .setRequired(true)
         );
     }

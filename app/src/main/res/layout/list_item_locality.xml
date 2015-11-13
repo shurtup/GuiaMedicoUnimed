@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="?android:listPreferredItemPaddingLeft"
+    android:paddingRight="?android:listPreferredItemPaddingRight"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp"
+    >
+
+    <ImageView
+        android:id="@+id/imageUnimed"
+        android:layout_width="60dp"
+        android:layout_height="42dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher"
+        />
+
+    <TextView
+        android:id="@+id/textClinica"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/imageUnimed"
+        android:layout_alignTop="@+id/imageUnimed"
+        android:text="Clinica"
+        android:textSize="20sp"
+        android:textColor="#333333"
+        android:paddingLeft="5dp"
+        />
+
+    <TextView
+        android:id="@+id/textEndereco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textClinica"
+        android:layout_toRightOf="@+id/imageUnimed"
+        android:text="Esgoto aberto"
+        android:textSize="10sp"
+        android:textColor="@color/text_light"
+        android:paddingLeft="5dp"
+        />
+
+    <TextView
+        android:id="@+id/textHora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textEndereco"
+        android:layout_alignParentRight="true"
+        android:text="Hora marcada?"
+        android:textColor="@color/indianRed"
+        android:textSize="10sp"
+        />
+
+
+
+</RelativeLayout>
