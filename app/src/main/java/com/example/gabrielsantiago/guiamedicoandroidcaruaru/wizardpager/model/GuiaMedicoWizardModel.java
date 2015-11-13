@@ -15,7 +15,7 @@ public class GuiaMedicoWizardModel extends AbstractWizardModel {
         return new PageList(
                 new Specialties(this, "Escolha a especialidade")
                         .addBranch("Urologia",
-                                new SingleFixedChoicePage(this, "Bread")
+                                new SingleFixedChoicePage(this, "E")
                                         .setChoices("White", "Wheat", "Rye", "Pretzel", "Ciabatta")
                                         .setRequired(true),
 
